@@ -100,7 +100,11 @@ werden die Bits entsprechend zur CS1 Unterscheidung gesetzt.
 void generateHash(uint8_t offset)
 {
 //  uint32_t uid = UID_BASE + (DEVTYPE - DEVTYPE_BASE - 1) * maxdevice + offset;
-  uint32_t uid = UID_BASE + offset;
+  uint32_t uid = 0x45009195ULL; // CAN-UID
+  for (uint8_t i = 0; i < offset; i++)
+    uid++;
+  
+//  uint32_t uid = UID_BASE + offset;
   uid_device[0] = (uint8_t)(uid >> 24);
   uid_device[1] = (uint8_t)(uid >> 16);
   uid_device[2] = (uint8_t)(uid >> 8);
