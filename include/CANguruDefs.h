@@ -11,6 +11,8 @@
 #ifndef CANguruDefs
 #define CANguruDefs
 
+#include "Preferences.h"
+
 #define CAN_FRAME_SIZE 13 /* maximum datagram size */
 
 // allgemein
