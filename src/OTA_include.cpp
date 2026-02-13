@@ -7,8 +7,7 @@
 #include <OTA_include.h>
 #include "ticker.h"
 #include "OWN_LED.h"
-
-#include <ElegantOTA.h>
+#include "ElegantOTA.h"
 
 Ticker tckrOTA;
 const float tckrOTATime = 0.01;
